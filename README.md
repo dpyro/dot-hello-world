@@ -11,19 +11,19 @@ Let's find out!
     npm install --global gulp
     ```
 
-2. Install dependencies
+2.  Install dependencies
 
     ```shell
     npm install
     ```
 
-3. Build it
+3.  Build it
 
     ```shell
     gulp
     ```
 
-4. Run it
+4.  Run it
 
     ```shell
     node dist/index.js
