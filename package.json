@@ -1,0 +1,8 @@
+{
+  "name": "dot-hello-world",
+  "version": "1.0.0",
+  "description": "How many config files does it take to build a modern Typescript app?",
+  "repository": "https://github.com/dpyro/dot-hello-world.git",
+  "author": "Sumant Manne <sumant.manne@gmail.com> (https://github.com/dpyro)",
+  "license": "MIT"
+}
