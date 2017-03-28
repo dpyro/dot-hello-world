@@ -5,6 +5,9 @@
   "repository": "https://github.com/dpyro/dot-hello-world.git",
   "author": "Sumant Manne <sumant.manne@gmail.com> (https://github.com/dpyro)",
   "license": "MIT",
+  "scripts": {
+    "test": "gulp test"
+  },
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1"

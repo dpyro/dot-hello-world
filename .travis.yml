@@ -1,0 +1,18 @@
+sudo: false
+
+language: node_js
+node_js:
+  - "iojs"
+  - "7"
+  - "6"
+  - "4"
+
+install:
+  - npm install
+
+before_script:
+  - npm install -g gulp
+
+script: gulp
+
+cache: yarn
