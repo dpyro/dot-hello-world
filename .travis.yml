@@ -2,16 +2,13 @@ sudo: false
 
 language: node_js
 node_js:
+  - "node"
   - "7"
   - "6"
 
-install:
-  - npm install
-
 before_script:
   - npm install -g gulp
-
-script: gulp test
+  - gulp
 
 cache: yarn
 

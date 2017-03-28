@@ -18,8 +18,8 @@ gulp.task('mocha', () => {
     .pipe(mocha());
 });
 
-gulp.task('test', ['lint', 'mocha'], () => {
-  // This will only run if the lint task is successful...
+gulp.task('test', ['lint', 'default'], () => {
+  return gulp.task('test-after-build', ['mocha']);
 });
 
 gulp.task('clean', () => {

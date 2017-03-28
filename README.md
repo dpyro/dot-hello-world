@@ -38,9 +38,8 @@ Let's find out!
     ```
 
 ## Commands
-- `gulp`
+- `gulp`: build
 - `gulp lint`
-- `gulp mocha`
-- `gulp test`: run `mocha` & `lint`
+- `gulp test`: build and test
 - `gulp clean`
-- `npm start`
+- `npm start`: run
