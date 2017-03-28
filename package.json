@@ -5,6 +5,10 @@
   "repository": "https://github.com/dpyro/dot-hello-world.git",
   "author": "Sumant Manne <sumant.manne@gmail.com> (https://github.com/dpyro)",
   "license": "MIT",
+  "homepage": "https://github.com/dpyro/dot-hello-world",
+  "bugs": {
+    "url": "https://github.com/dpyro/dot-hello-world/issues"
+  },
   "main": "src/index.ts",
   "scripts": {
     "start": "node dist/index.js",
@@ -17,6 +21,11 @@
     "typescript": "^2.2.2"
   },
   "devDependencies": {
-    "gulp-clean": "^0.3.2"
+    "coveralls": "^2.12.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-mocha": "^4.1.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "remap-istanbul": "^0.9.5"
   }
 }

@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const clean = require('gulp-clean');
 const eslint = require('gulp-eslint');
+const mocha = require('gulp-mocha');
 const ts = require('gulp-typescript');
 
 gulp.task('lint', () => {
@@ -11,7 +12,13 @@ gulp.task('lint', () => {
     .pipe(eslint.failAfterError());
 });
 
-gulp.task('test', ['lint'], () => {
+gulp.task('mocha', () => {
+  return gulp
+    .src('test/**.js', { read: false } )
+    .pipe(mocha());
+});
+
+gulp.task('test', ['lint', 'mocha'], () => {
   // This will only run if the lint task is successful...
 });
 
