@@ -19,7 +19,7 @@ coverage
 .tscache/
 
 # Build
-build/
+dist/
 
 # VSCode ignores based on https://github.com/github/gitignore/blob/master/Global/VisualStudioCode.gitignore
 .vscode/*
