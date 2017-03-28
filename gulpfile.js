@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
+const ts = require('gulp-typescript');
 
 gulp.task('lint', () => {
   return gulp
@@ -14,5 +15,9 @@ gulp.task('test', ['lint'], () => {
 });
 
 gulp.task('default', () => {
-
+  return gulp.src('src/**/*.ts')
+    .pipe(ts({
+      out: 'index.js'
+    }))
+    .pipe(gulp.dest('dist/'));
 });

@@ -5,11 +5,15 @@
   "repository": "https://github.com/dpyro/dot-hello-world.git",
   "author": "Sumant Manne <sumant.manne@gmail.com> (https://github.com/dpyro)",
   "license": "MIT",
+  "main": "src/index.ts",
   "scripts": {
+    "start": "node dist/index.js",
     "test": "gulp test"
   },
   "dependencies": {
     "gulp": "^3.9.1",
-    "gulp-eslint": "^3.0.1"
+    "gulp-eslint": "^3.0.1",
+    "gulp-typescript": "^3.1.6",
+    "typescript": "^2.2.2"
   }
 }
