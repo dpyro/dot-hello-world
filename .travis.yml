@@ -2,7 +2,6 @@ sudo: false
 
 language: node_js
 node_js:
-  - "iojs"
   - "7"
   - "6"
   - "4"
@@ -13,6 +12,6 @@ install:
 before_script:
   - npm install -g gulp
 
-script: gulp
+script: gulp test
 
 cache: yarn
