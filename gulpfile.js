@@ -1,8 +1,10 @@
+const del = require('del');
 const gulp = require('gulp');
-const clean = require('gulp-clean');
 const eslint = require('gulp-eslint');
 const mocha = require('gulp-mocha');
 const ts = require('gulp-typescript');
+
+const tsProject = ts.createProject('tsconfig.json');
 
 gulp.task('lint', () => {
   return gulp
@@ -10,6 +12,17 @@ gulp.task('lint', () => {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
+});
+
+gulp.task('build', () => {
+  return tsProject
+    .src()
+    .pipe(tsProject())
+    .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('watch', ['build'], () => {
+  return gulp.watch('src/**/*.ts', ['build']);
 });
 
 gulp.task('mocha', () => {
@@ -23,16 +36,10 @@ gulp.task('test', ['lint', 'default'], () => {
 });
 
 gulp.task('clean', () => {
-  return gulp
-    .src('dist/', { read: false })
-    .pipe(clean());
+  return del([
+    'dist/',
+    '**/*.log'
+  ]);
 });
 
-gulp.task('default', () => {
-  const tsProject = ts.createProject('tsconfig.json');
-
-  return tsProject
-    .src()
-    .pipe(tsProject())
-    .pipe(gulp.dest('dist/'));
-});
+gulp.task('default', ['build']);
