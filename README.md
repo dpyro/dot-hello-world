@@ -44,6 +44,7 @@ Let's find out!
 - `gulp watch`: watchify and build TypeScript files
 - `gulp lint`
 - `gulp test`: build and test
+- `gulp doc`: output documentation to `doc/`
 - `gulp clean`
 - `npm start`: run
 - `npm run cover`: stores coverage information in `coverage/`

@@ -2,11 +2,13 @@ const del = require('del');
 const gulp = require('gulp');
 const eslint = require('gulp-eslint');
 const mocha = require('gulp-mocha');
+const typedoc = require('gulp-typedoc');
 const ts = require('gulp-typescript');
 
 const dir = {
   build: 'dist',
   coverage: 'coverage',
+  doc: 'doc',
   src: 'src',
   test: 'test'
 };
@@ -19,7 +21,8 @@ gulp.task('lint', () => {
       '**/*.js',
       '!node_modules/**',
       `!${dir.build}/**`,
-      `!${dir.coverage}/**`
+      `!${dir.coverage}/**`,
+      `!${dir.doc}/**`
     ])
     .pipe(eslint())
     .pipe(eslint.format())
@@ -45,6 +48,25 @@ gulp.task('test', ['pre-test'], () => {
   return gulp
     .src([`${dir.test}/**/*.js`])
     .pipe(mocha())
+});
+
+gulp.task('doc', () => {
+  return gulp
+    .src(['src/**.ts'])
+    .pipe(typedoc({
+      // TypeScript options
+      target: 'es6',
+      includeDeclarations: true,
+      excludeExternals: true,
+
+      // Output options
+      out: dir.doc,
+      json: `${dir.doc}/output.json`,
+
+      // TypeDoc options
+      readme: 'README.md',
+      version: true
+  }));
 });
 
 gulp.task('clean', () => {

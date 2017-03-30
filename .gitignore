@@ -10,7 +10,10 @@ yarn-debug.log*
 yarn-error.log*
 
 # Coverage directory used by tools like istanbul
-coverage
+coverage/
+
+# Documentation
+doc/
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
