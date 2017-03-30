@@ -4,6 +4,7 @@ const eslint = require('gulp-eslint')
 const mocha = require('gulp-mocha')
 const typedoc = require('gulp-typedoc')
 const ts = require('gulp-typescript')
+const tslint = require('gulp-tslint')
 
 const dir = {
   build: 'dist',
@@ -15,7 +16,7 @@ const dir = {
 
 const tsProject = ts.createProject('tsconfig.json')
 
-gulp.task('lint', () => {
+gulp.task('eslint', () => {
   return gulp
     .src([
       '**/*.js',
@@ -29,6 +30,15 @@ gulp.task('lint', () => {
     .pipe(eslint.failAfterError())
 })
 
+gulp.task('tslint', () => {
+  return gulp
+    .src(`${dir.src}/**.ts`)
+    .pipe(tslint())
+    .pipe(tslint.report())
+})
+
+gulp.task('lint', ['eslint', 'tslint'])
+
 gulp.task('build', () => {
   return tsProject
     .src()
@@ -40,9 +50,7 @@ gulp.task('watch', ['build'], () => {
   return gulp.watch([`${dir.src}/**/*.ts`, `${dir.src}/**/*.js`], ['build'])
 })
 
-gulp.task('pre-test', ['build', 'lint'], () => {
-  // Add code coverage runners
-})
+gulp.task('pre-test', ['build', 'lint'])
 
 gulp.task('test', ['pre-test'], () => {
   return gulp

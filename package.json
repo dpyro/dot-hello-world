@@ -27,9 +27,12 @@
     "typescript": "^2.2.2"
   },
   "devDependencies": {
+    "@types/node": "^7.0.12",
+    "gulp-tslint": "^7.1.0",
     "gulp-typedoc": "^2.0.2",
     "istanbul": "^0.4.5",
     "standard": "^9.0.2",
+    "tslint": "^5.0.0",
     "typedoc": "^0.5.9"
   }
 }

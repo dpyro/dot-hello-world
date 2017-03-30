@@ -1,0 +1,32 @@
+// Inspired by https://github.com/blakeembrey/tslint-config-standard/blob/master/tslint.js
+{
+  "rules": {
+    "curly": true,
+    "label-position": true,
+    "no-arg": true,
+    "no-conditional-assignment": true,
+    "no-duplicate-variable": true,
+    "no-empty": true,
+    "no-eval": true,
+    "no-switch-case-fall-through": true,
+    "no-unused-expression": true,
+    //"no-use-before-declare": true,
+    "no-var-keyword": true,
+    "radix": true,
+    "triple-equals": [
+      true,
+      "allow-null-check"
+    ],
+    "use-isnan": true,
+    "eofline": true,
+    "indent": [
+      true,
+      2
+    ],
+    "no-trailing-whitespace": true,
+    "class-name": true,
+    "jsdoc-format": true,
+    "new-parens": true,
+    "no-angle-bracket-type-assertion": true
+  }
+}

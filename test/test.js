@@ -1,4 +1,5 @@
 // http://mochajs.org/
+/* eslint-env mocha */
 
 require('mocha')
 

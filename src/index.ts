@@ -1,5 +1,13 @@
-export const str: string = "Hello, cruel world! 😕";
+export const str: string = 'Hello, cruel world! 😕'
 
-export default function run() {
-  console.log(str);
+/**
+ * Print out the hello world string.
+ * @export
+ */
+export default function run () {
+  console.log(str)
+}
+
+if (require.main === module) {
+  run()
 }
