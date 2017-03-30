@@ -4,11 +4,23 @@ const eslint = require('gulp-eslint');
 const mocha = require('gulp-mocha');
 const ts = require('gulp-typescript');
 
+const dir = {
+  build: 'dist',
+  coverage: 'coverage',
+  src: 'src',
+  test: 'test'
+};
+
 const tsProject = ts.createProject('tsconfig.json');
 
 gulp.task('lint', () => {
   return gulp
-    .src(['**/*.js', '!node_modules/**'])
+    .src([
+      '**/*.js',
+      '!node_modules/**',
+      `!${dir.build}/**`,
+      `!${dir.coverage}/**`
+    ])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
@@ -18,26 +30,27 @@ gulp.task('build', () => {
   return tsProject
     .src()
     .pipe(tsProject())
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest(dir.build));
 });
 
 gulp.task('watch', ['build'], () => {
-  return gulp.watch('src/**/*.ts', ['build']);
+  return gulp.watch([`${dir.src}/**/*.ts`, `${dir.src}/**/*.js`], ['build']);
 });
 
-gulp.task('mocha', () => {
+gulp.task('pre-test', ['build', 'lint'], () => {
+  // Add code coverage runners
+});
+
+gulp.task('test', ['pre-test'], () => {
   return gulp
-    .src('test/**.js', { read: false } )
-    .pipe(mocha());
-});
-
-gulp.task('test', ['lint', 'default'], () => {
-  return gulp.task('test-after-build', ['mocha']);
+    .src([`${dir.test}/**/*.js`])
+    .pipe(mocha())
 });
 
 gulp.task('clean', () => {
   return del([
-    'dist/',
+    `${dir.coverage}/`,
+    `${dir.build}/`,
     '**/*.log'
   ]);
 });

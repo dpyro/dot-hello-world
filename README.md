@@ -46,3 +46,4 @@ Let's find out!
 - `gulp test`: build and test
 - `gulp clean`
 - `npm start`: run
+- `npm run cover`: stores coverage information in `coverage/`
