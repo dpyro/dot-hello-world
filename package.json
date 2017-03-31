@@ -2,14 +2,20 @@
   "name": "dot-hello-world",
   "version": "1.0.0",
   "description": "How many config files does it take to build a modern Typescript app?",
-  "repository": "https://github.com/dpyro/dot-hello-world.git",
-  "author": "Sumant Manne <sumant.manne@gmail.com> (https://github.com/dpyro)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dpyro/dot-hello-world.git"
+  },
+  "author": "Sumant Manne <sumant.manne@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/dpyro/dot-hello-world",
   "bugs": {
     "url": "https://github.com/dpyro/dot-hello-world/issues"
   },
   "main": "dist/index.js",
+  "directories": {
+    "test": "test/"
+  },
   "scripts": {
     "prepublishOnly": "gulp",
     "start": "node dist/main.js",
@@ -17,7 +23,6 @@
     "cover": "istanbul cover node_modules/mocha/bin/_mocha -- test/test.js -R spec"
   },
   "dependencies": {
-    "coveralls": "^2.12.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
