@@ -1,4 +1,5 @@
 const del = require('del')
+const exec = require('child_process').exec
 const gulp = require('gulp')
 const eslint = require('gulp-eslint')
 const mocha = require('gulp-mocha')
@@ -37,7 +38,16 @@ gulp.task('tslint', () => {
     .pipe(tslint.report())
 })
 
-gulp.task('lint', ['eslint', 'tslint'])
+gulp.task('check-links', (cb) => {
+  exec('./node_modules/markdown-link-check/markdown-link-check README.md', (err, stdout, stderr) => {
+    if (stderr != null && stderr !== '') {
+      console.error(stderr)
+    }
+    cb(err)
+  })
+})
+
+gulp.task('lint', ['eslint', 'tslint', 'check-links'])
 
 gulp.task('build', () => {
   return tsProject

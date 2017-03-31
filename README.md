@@ -53,18 +53,18 @@ Let's find out!
 
 ## Packages
 
-- `@types/node`: Gives TypeScript access to node globals such as `require` and `module`.
-- `del`: Allows `gulpfile.js` to delete files.
-- `eslint`: JavaScript linter.
-- `gulp`: JavaScript task runnner with task dependency management.
-- `gulp-eslint`: Gulp plugin for ESLint.
-- `gulp-mocha`: Gulp plugin for Mocha.
-- `gulp-tslint`: Gulp plugin for TSLint.
-- `gulp-typedoc`: Gulp plugin for TypeDoc.
-- `gulp-typescript`: Gulp plugin for Typescript.
-- `istanbul`: JavaScript code coverage instrumentation library.
-- `mocha`: JavaScript test framework.
-- `standard`: Opinionated JavaScript linting style.
-- `tslint`: TypeScript linter.
-- `typedoc`: TypeScript documentation generator.
-- `typescript`: Typed JavaScript superset language.
+- [`@types/node`](https://www.npmjs.com/package/@types/node): Gives TypeScript access to node globals such as `require` and `module`.
+- [`del`](https://www.npmjs.com/package/del): Allows `gulpfile.js` to delete files.
+- [`eslint`](https://www.npmjs.com/package/eslint): JavaScript linter.
+- [`gulp`](https://www.npmjs.com/package/gulp): JavaScript task runnner with task dependency management.
+- [`gulp-eslint`](https://www.npmjs.com/package/gulp-eslint): Gulp plugin for ESLint.
+- [`gulp-mocha`](https://www.npmjs.com/package/gulp-mocha): Gulp plugin for Mocha.
+- [`gulp-tslint`](https://www.npmjs.com/package/gulp-tslint): Gulp plugin for TSLint.
+- [`gulp-typedoc`](https://www.npmjs.com/package/typedoc): Gulp plugin for TypeDoc.
+- [`gulp-typescript`](https://www.npmjs.com/package/typescript): Gulp plugin for Typescript.
+- [`istanbul`](https://www.npmjs.com/package/istanbul): JavaScript code coverage instrumentation library.
+- [`mocha`](https://www.npmjs.com/package/mocha): JavaScript test framework.
+- [`standard`](https://www.npmjs.com/package/standard): Opinionated JavaScript linting style.
+- [`tslint`](https://www.npmjs.com/package/tslint): TypeScript linter.
+- [`typedoc`](https://www.npmjs.com/package/typedoc): TypeScript documentation generator.
+- [`typescript`](https://www.npmjs.com/package/typescript): Typed JavaScript superset language.
