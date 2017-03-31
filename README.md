@@ -9,25 +9,26 @@ How many config files does it take to build a modern Typescript app?
 Let's find out!
 
 ## Quickstart
-1.  Install `gulp`.
+
+1. Install `gulp`.
 
     ```shell
     npm install --global gulp
     ```
 
-2.  Install dependencies.
+1. Install dependencies.
 
     ```shell
     npm install
     ```
 
-3.  Build it.
+1. Build it.
 
     ```shell
     gulp
     ```
 
-4.  Run it.
+1. Run it.
 
     ```shell
     node dist/index.js
@@ -40,6 +41,7 @@ Let's find out!
     ```
 
 ## Commands
+
 - `gulp`: build
 - `gulp watch`: watchify and build TypeScript files
 - `gulp lint`
@@ -48,3 +50,21 @@ Let's find out!
 - `gulp clean`
 - `npm start`: run
 - `npm run cover`: stores coverage information in `coverage/`
+
+## Packages
+
+- `@types/node`: Gives TypeScript access to node globals such as `require` and `module`.
+- `del`: Allows `gulpfile.js` to delete files.
+- `eslint`: JavaScript linter.
+- `gulp`: JavaScript task runnner with task dependency management.
+- `gulp-eslint`: Gulp plugin for ESLint.
+- `gulp-mocha`: Gulp plugin for Mocha.
+- `gulp-tslint`: Gulp plugin for TSLint.
+- `gulp-typedoc`: Gulp plugin for TypeDoc.
+- `gulp-typescript`: Gulp plugin for Typescript.
+- `istanbul`: JavaScript code coverage instrumentation library.
+- `mocha`: JavaScript test framework.
+- `standard`: Opinionated JavaScript linting style.
+- `tslint`: TypeScript linter.
+- `typedoc`: TypeScript documentation generator.
+- `typescript`: Typed JavaScript superset language.

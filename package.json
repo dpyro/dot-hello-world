@@ -4,9 +4,12 @@
   "description": "How many config files does it take to build a modern Typescript app?",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dpyro/dot-hello-world.git"
+    "url": "git+https://github.com/dpyro/dot-hello-world.git"
   },
-  "author": "Sumant Manne <sumant.manne@gmail.com>",
+  "author": {
+    "name": "Sumant Manne",
+    "email": "<sumant.manne@gmail.com>"
+  },
   "license": "MIT",
   "homepage": "https://github.com/dpyro/dot-hello-world",
   "bugs": {
@@ -22,22 +25,27 @@
     "test": "gulp test",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha -- test/test.js -R spec"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@types/node": "^7.0.12",
     "del": "^2.2.2",
+    "eslint": "^3.19.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-mocha": "^4.1.0",
-    "gulp-typescript": "^3.1.6",
-    "mocha": "^3.2.0",
-    "typescript": "^2.2.2"
-  },
-  "devDependencies": {
-    "@types/node": "^7.0.12",
     "gulp-tslint": "^7.1.0",
     "gulp-typedoc": "^2.0.2",
+    "gulp-typescript": "^3.1.6",
     "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
     "standard": "^9.0.2",
     "tslint": "^5.0.0",
-    "typedoc": "^0.5.9"
-  }
+    "typedoc": "^0.5.9",
+    "typescript": "^2.2.2"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "helloworld",
+    "boilerplate"
+  ]
 }
