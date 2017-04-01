@@ -4,7 +4,7 @@ const gulp = require('gulp')
 const eslint = require('gulp-eslint')
 const mocha = require('gulp-mocha')
 const typedoc = require('gulp-typedoc')
-const ts = require('gulp-typescript')
+const typescript = require('gulp-typescript')
 const tslint = require('gulp-tslint')
 
 const dir = {
@@ -15,7 +15,7 @@ const dir = {
   test: 'test'
 }
 
-const tsProject = ts.createProject('tsconfig.json')
+const tsProject = typescript.createProject('tsconfig.json')
 
 gulp.task('eslint', () => {
   return gulp
@@ -73,14 +73,11 @@ gulp.task('doc', () => {
     .src(['src/**.ts'])
     .pipe(typedoc({
       // TypeScript options
-      target: 'es6',
       includeDeclarations: true,
       excludeExternals: true,
-
       // Output options
       out: dir.doc,
       json: `${dir.doc}/output.json`,
-
       // TypeDoc options
       readme: 'README.md',
       version: true

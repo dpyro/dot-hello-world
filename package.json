@@ -20,7 +20,7 @@
     "test": "test/"
   },
   "scripts": {
-    "prepublishOnly": "gulp",
+    "prepublishOnly": "gulp test",
     "start": "node dist/main.js",
     "test": "gulp test",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha -- test/test.js -R spec"
