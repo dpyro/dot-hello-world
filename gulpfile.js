@@ -3,6 +3,7 @@ const exec = require('child_process').exec
 const gulp = require('gulp')
 const eslint = require('gulp-eslint')
 const mocha = require('gulp-mocha')
+const sourcemaps = require('gulp-sourcemaps')
 const typedoc = require('gulp-typedoc')
 const typescript = require('gulp-typescript')
 const tslint = require('gulp-tslint')
@@ -52,7 +53,9 @@ gulp.task('lint', ['eslint', 'tslint', 'check-links'])
 gulp.task('build', () => {
   return tsProject
     .src()
+    .pipe(sourcemaps.init())
     .pipe(tsProject())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(dir.build))
 })
 

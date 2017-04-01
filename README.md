@@ -51,6 +51,11 @@ Let's find out!
 - `npm start`: run
 - `npm run cover`: stores coverage information in `coverage/`
 
+## IDE Hints
+
+A `launch.json` configuration for VSCode is included.
+I also recommend using [QuickTask](https://marketplace.visualstudio.com/items?itemName=lkytal.quicktask) with VSCode: `ext install quicktask`.
+
 ## Packages
 
 - [`@types/node`](https://www.npmjs.com/package/@types/node): Gives TypeScript access to node globals such as `require` and `module`.

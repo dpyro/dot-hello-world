@@ -21,7 +21,7 @@
   },
   "scripts": {
     "prepublishOnly": "gulp test",
-    "start": "node dist/main.js",
+    "start": "node dist/index.js",
     "test": "gulp test",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha -- test/test.js -R spec"
   },
@@ -32,6 +32,7 @@
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-mocha": "^4.1.0",
+    "gulp-sourcemaps": "^2.5.0",
     "gulp-tslint": "^7.1.0",
     "gulp-typedoc": "^2.0.2",
     "gulp-typescript": "^3.1.6",
