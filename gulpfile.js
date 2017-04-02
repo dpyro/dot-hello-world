@@ -23,7 +23,8 @@ const tsProject = typescript.createProject('tsconfig.json')
 gulp.task('eslint', () => {
   return gulp
     .src([
-      '**/*.js',
+      '**.js',
+      '**.json',
       '!node_modules/**',
       `!${dir.build}/**`,
       `!${dir.coverage}/**`,
@@ -50,26 +51,29 @@ gulp.task('check-links', (cb) => {
   })
 })
 
-gulp.task('lint', ['eslint', 'tslint', 'check-links'])
+gulp.task('lint', ['eslint', 'tslint'])
 
 gulp.task('build', ['image'], () => {
   return tsProject
     .src()
     .pipe(sourcemaps.init())
     .pipe(tsProject())
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(dir.build))
 })
 
-gulp.task('watch', ['build'], () => {
-  return gulp.watch([`${dir.src}/**/*.ts`, `${dir.src}/**/*.js`], ['build'])
+gulp.task('watch', () => {
+  gulp.watch('*.js', ['eslint'])
+  gulp.watch(`${dir.src}/**.ts`, ['build'])
+  gulp.watch(`${dir.src}/**.ts`, ['tslint'])
+  gulp.watch(`${dir.test}/**.js`, ['eslint'])
 })
 
 gulp.task('pre-test', ['build', 'lint'])
 
-gulp.task('test', ['pre-test'], () => {
+gulp.task('test', ['pre-test', 'check-links'], () => {
   return gulp
-    .src([`${dir.test}/**/*.js`])
+    .src([`${dir.test}/**.js`])
     .pipe(mocha())
 })
 
@@ -90,7 +94,7 @@ gulp.task('doc', () => {
 })
 
 gulp.task('image', () => {
-  return gulp.src(`${dir.images}/**/*`)
+  return gulp.src(`${dir.images}/**`)
     .pipe(imagemin())
     .pipe(gulp.dest(`${dir.images}/`))
 })
@@ -99,7 +103,7 @@ gulp.task('clean', () => {
   return del([
     `${dir.coverage}/`,
     `${dir.build}/`,
-    '**/*.log'
+    '**.log'
   ])
 })
 

@@ -18,8 +18,26 @@ dist/*.js.map
 # Images used by respository
 images/
 
+# TypeScript source code
+src/
+
+# Tests
+test/
+
+# dotfiles
+.editorconfig
+.eslintrc.json
+.gitignore
+.travis.yml
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+gulpfile.js
+tsconfig.json
+tslint.json
+yarn.lock
+
 # Typescript
 .tscache/
 
 # VSCode ignores based on https://github.com/github/gitignore/blob/master/Global/VisualStudioCode.gitignore
-.vscode/*
+.vscode/
