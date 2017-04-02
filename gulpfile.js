@@ -24,7 +24,6 @@ gulp.task('eslint', () => {
   return gulp
     .src([
       '**.js',
-      '**.json',
       '!node_modules/**',
       `!${dir.build}/**`,
       `!${dir.coverage}/**`,
