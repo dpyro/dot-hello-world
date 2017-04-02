@@ -8,6 +8,7 @@ export default function run () {
   console.log(str)
 }
 
+// Run if executed and not imported
 if (require.main === module) {
   run()
 }

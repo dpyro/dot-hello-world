@@ -2,6 +2,7 @@ const del = require('del')
 const exec = require('child_process').exec
 const gulp = require('gulp')
 const eslint = require('gulp-eslint')
+const imagemin = require('gulp-imagemin')
 const mocha = require('gulp-mocha')
 const sourcemaps = require('gulp-sourcemaps')
 const typedoc = require('gulp-typedoc')
@@ -50,7 +51,7 @@ gulp.task('check-links', (cb) => {
 
 gulp.task('lint', ['eslint', 'tslint', 'check-links'])
 
-gulp.task('build', () => {
+gulp.task('build', ['image'], () => {
   return tsProject
     .src()
     .pipe(sourcemaps.init())
@@ -85,6 +86,12 @@ gulp.task('doc', () => {
       readme: 'README.md',
       version: true
     }))
+})
+
+gulp.task('image', () => {
+  return gulp.src('images/**/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('images/'))
 })
 
 gulp.task('clean', () => {
