@@ -13,6 +13,7 @@ const dir = {
   build: 'dist',
   coverage: 'coverage',
   doc: 'doc',
+  images: 'images',
   src: 'src',
   test: 'test'
 }
@@ -89,9 +90,9 @@ gulp.task('doc', () => {
 })
 
 gulp.task('image', () => {
-  return gulp.src('images/**/*')
+  return gulp.src(`${dir.images}/**/*`)
     .pipe(imagemin())
-    .pipe(gulp.dest('images/'))
+    .pipe(gulp.dest(`${dir.images}/`))
 })
 
 gulp.task('clean', () => {

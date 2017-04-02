@@ -1,8 +1,10 @@
 # dot-hello-world
 
 [![Build Status](https://travis-ci.org/dpyro/dot-hello-world.svg?branch=master)](https://travis-ci.org/dpyro/dot-hello-world)
-[![Dependencies](https://david-dm.org/dpyro/dot-hello-world/dev-status.svg)](https://david-dm.org/dpyro/dot-hello-world)
+[![Dev Dependencies](https://img.shields.io/david/dev/dpyro/dot-hello-world.svg)](https://david-dm.org/dpyro/dot-hello-world)
 [![bitHound Overall Score](https://www.bithound.io/github/dpyro/dot-hello-world/badges/score.svg)](https://www.bithound.io/github/dpyro/dot-hello-world)
+[![Known Vulnerabilities](https://snyk.io/test/github/dpyro/dot-hello-world/badge.svg)](https://snyk.io/test/github/dpyro/dot-hello-world)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://spdx.org/licenses/MIT.html)
 
 How many config files does it take to build a modern Typescript app?
 Let's find out!
