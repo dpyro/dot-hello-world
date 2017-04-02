@@ -5,11 +5,9 @@
   },
   "compileOnSave": false,
   "include": [
-    "src/**.ts",
-    "src/**.js"
+    "src/**.ts"
   ],
   "exclude": [
-    "node_modules/",
-    "**/*.spec.ts"
+    "node_modules/"
   ]
 }

@@ -1,7 +1,7 @@
 # dot-hello-world
 
 [![Build Status](https://travis-ci.org/dpyro/dot-hello-world.svg?branch=master)](https://travis-ci.org/dpyro/dot-hello-world)
-[![Dependencies](https://david-dm.org/dpyro/dot-hello-world/status.svg)](https://david-dm.org/dpyro/dot-hello-world)
+<!--[![Dependencies](https://david-dm.org/dpyro/dot-hello-world/status.svg)](https://david-dm.org/dpyro/dot-hello-world)-->
 [![Dependencies](https://david-dm.org/dpyro/dot-hello-world/dev-status.svg)](https://david-dm.org/dpyro/dot-hello-world)
 [![bitHound Overall Score](https://www.bithound.io/github/dpyro/dot-hello-world/badges/score.svg)](https://www.bithound.io/github/dpyro/dot-hello-world)
 
@@ -63,6 +63,7 @@ I also recommend using [QuickTask](https://marketplace.visualstudio.com/items?it
 - [`eslint`](https://www.npmjs.com/package/eslint): JavaScript linter.
 - [`gulp`](https://www.npmjs.com/package/gulp): JavaScript task runnner with task dependency management.
 - [`gulp-eslint`](https://www.npmjs.com/package/gulp-eslint): Gulp plugin for ESLint.
+- [`gulp-imagemin`](https://www.npmjs.com/package/gulp-imagemin): Gulp plugin to minimize images.
 - [`gulp-mocha`](https://www.npmjs.com/package/gulp-mocha): Gulp plugin for Mocha.
 - [`gulp-tslint`](https://www.npmjs.com/package/gulp-tslint): Gulp plugin for TSLint.
 - [`gulp-typedoc`](https://www.npmjs.com/package/typedoc): Gulp plugin for TypeDoc.
