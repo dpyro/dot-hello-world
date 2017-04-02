@@ -1,7 +1,6 @@
 # dot-hello-world
 
 [![Build Status](https://travis-ci.org/dpyro/dot-hello-world.svg?branch=master)](https://travis-ci.org/dpyro/dot-hello-world)
-<!--[![Dependencies](https://david-dm.org/dpyro/dot-hello-world/status.svg)](https://david-dm.org/dpyro/dot-hello-world)-->
 [![Dependencies](https://david-dm.org/dpyro/dot-hello-world/dev-status.svg)](https://david-dm.org/dpyro/dot-hello-world)
 [![bitHound Overall Score](https://www.bithound.io/github/dpyro/dot-hello-world/badges/score.svg)](https://www.bithound.io/github/dpyro/dot-hello-world)
 
